@@ -46,11 +46,13 @@
 #' @param outputFolder                        Name of local folder to place results; make sure to use
 #'                                            forward slashes (/). Do not use a folder on a network
 #'                                            drive since this greatly impacts performance.
+#' @param instantiateCohorts                  Do you want to instantiate cohorts?
 #' @param databaseId                          A short string for identifying the database (e.g.
 #'                                            'Synpuf').
 #' @param databaseName                        The full name of the database (e.g. 'Medicare Claims
 #'                                            Synthetic Public Use Files (SynPUFs)').
 #' @param databaseDescription                 A short description (several sentences) of the database.
+#' @param incremental                         Run in Incremental mode?
 #' @param incrementalFolder                   Name of local folder to hold the logs for incremental
 #'                                            run; make sure to use forward slashes (/). Do not use a
 #'                                            folder on a network drive since this greatly impacts
@@ -65,6 +67,8 @@ execute <- function(connectionDetails,
                     tempEmulationSchema = cohortDatabaseSchema,
                     verifyDependencies = TRUE,
                     outputFolder,
+                    instantiateCohorts = TRUE,
+                    incremental = TRUE,
                     incrementalFolder = file.path(outputFolder, "incrementalFolder"),
                     databaseId = "Unknown",
                     databaseName = databaseId,
@@ -85,22 +89,24 @@ execute <- function(connectionDetails,
     verifyDependencies()
   }
   
-  ParallelLogger::logInfo("Creating cohorts")
-  CohortDiagnostics::instantiateCohortSet(
-    connectionDetails = connectionDetails,
-    cdmDatabaseSchema = cdmDatabaseSchema,
-    cohortDatabaseSchema = cohortDatabaseSchema,
-    vocabularyDatabaseSchema = vocabularyDatabaseSchema,
-    cohortTable = cohortTable,
-    tempEmulationSchema = tempEmulationSchema,
-    packageName = "SkeletonCohortDiagnosticsStudy",
-    cohortToCreateFile = "settings/CohortsToCreate.csv",
-    createCohortTable = TRUE,
-    generateInclusionStats = TRUE,
-    inclusionStatisticsFolder = outputFolder,
-    incremental = TRUE,
-    incrementalFolder = incrementalFolder
-  )
+  if (instantiateCohorts) {
+    ParallelLogger::logInfo("Creating cohorts")
+    CohortDiagnostics::instantiateCohortSet(
+      connectionDetails = connectionDetails,
+      cdmDatabaseSchema = cdmDatabaseSchema,
+      cohortDatabaseSchema = cohortDatabaseSchema,
+      vocabularyDatabaseSchema = vocabularyDatabaseSchema,
+      cohortTable = cohortTable,
+      tempEmulationSchema = tempEmulationSchema,
+      packageName = "SkeletonCohortDiagnosticsStudy",
+      cohortToCreateFile = "settings/CohortsToCreate.csv",
+      createCohortTable = TRUE,
+      generateInclusionStats = TRUE,
+      inclusionStatisticsFolder = outputFolder,
+      incremental = incremental,
+      incrementalFolder = incrementalFolder
+    )
+  }
   
   ParallelLogger::logInfo("Running study diagnostics")
   CohortDiagnostics::runCohortDiagnostics(
@@ -179,7 +185,7 @@ execute <- function(connectionDetails,
       )
     ),
     minCellCount = 5,
-    incremental = TRUE,
+    incremental = incremental,
     incrementalFolder = incrementalFolder
   )
 }
