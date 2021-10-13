@@ -13,6 +13,8 @@ execute(
   tempEmulationSchema = cohortDatabaseSchema,
   verifyDependencies = TRUE,
   outputFolder,
+  instantiateCohorts = TRUE,
+  incremental = TRUE,
   incrementalFolder = file.path(outputFolder, "incrementalFolder"),
   databaseId = "Unknown",
   databaseName = databaseId,
@@ -54,6 +56,10 @@ can be created.}
 \item{outputFolder}{Name of local folder to place results; make sure to use
 forward slashes (/). Do not use a folder on a network
 drive since this greatly impacts performance.}
+
+\item{instantiateCohorts}{Do you want to instantiate cohorts?}
+
+\item{incremental}{Run in Incremental mode?}
 
 \item{incrementalFolder}{Name of local folder to hold the logs for incremental
 run; make sure to use forward slashes (/). Do not use a
