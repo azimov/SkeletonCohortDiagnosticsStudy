@@ -315,6 +315,12 @@
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
+		"R.methodsS3" : {
+			"Package" : "R.methodsS3",
+			"Version" : "1.8.1",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
 		"RColorBrewer" : {
 			"Package" : "RColorBrewer",
 			"Version" : "1.1-2",
@@ -423,6 +429,12 @@
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
+		"R.oo" : {
+			"Package" : "R.oo",
+			"Version" : "1.24.0",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
 		"readr" : {
 			"Package" : "readr",
 			"Version" : "2.0.2",
@@ -456,6 +468,12 @@
 		"digest" : {
 			"Package" : "digest",
 			"Version" : "0.6.28",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
+		"R.utils" : {
+			"Package" : "R.utils",
+			"Version" : "2.11.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -775,7 +793,7 @@
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "CohortDiagnostics",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "diagnosticsExplorer"
+			"RemoteRef" : "v2.2.0"
 		},
 		"OhdsiSharing" : {
 			"Package" : "OhdsiSharing",
