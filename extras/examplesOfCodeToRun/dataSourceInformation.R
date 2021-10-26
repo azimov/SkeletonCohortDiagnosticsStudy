@@ -4,10 +4,7 @@ source(Sys.getenv("startUpScriptLocation"))
 executeOnMultipleDataSources <- function(x) {
   library(magrittr)
   if (x$generateCohortTableName) {
-    cohortTableName <- paste0(
-      stringr::str_squish(x$databaseId),
-      stringr::str_squish("SkeletonCohortDiagnosticsStudy")
-    )
+    cohortTableName <- "SkeletonCohortDiagnosticsStudy"
   }
   
   # this function gets details of the data source from cdm source table in omop, if populated.
