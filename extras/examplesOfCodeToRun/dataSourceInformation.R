@@ -211,7 +211,8 @@ executeOnMultipleDataSources <- function(x) {
       server = x$cdmSource$server,
       user = keyring::key_get(service = x$userService),
       password =  keyring::key_get(service = x$passwordService),
-      port = x$cdmSource$port
+      port = x$cdmSource$port,
+      extraSettings = if (Sys.getenv("connectionExtraSettings") != "") {Sys.getenv("connectionExtraSettings")} else {NULL}
     )
   # The name of the database schema where the CDM data can be found:
   cdmDatabaseSchema <- x$cdmSource$cdmDatabaseSchema
