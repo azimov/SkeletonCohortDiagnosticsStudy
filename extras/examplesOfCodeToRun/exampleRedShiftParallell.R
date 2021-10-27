@@ -5,7 +5,7 @@
 
 ############### processes to run Cohort Diagnostics ################################################################
 library(magrittr)
-
+Sys.getenv("bulkLoad")
 ################################################################################
 # VARIABLES - please change
 ################################################################################
@@ -23,8 +23,8 @@ options(andromedaTempFolder = file.path(outputFolder, "andromedaTemp"))
 # lets get meta information for each of these databaseId. This includes connection information.
 source("extras/examplesOfCodeToRun/dataSourceInformation.R")
 
-cdmSources <- cdmSources2
-rm("cdmSources2")
+# cdmSources <- cdmSources2
+# rm("cdmSources2")
 ############## databaseIds to run cohort diagnostics on that source  #################
 databaseIds <-
   c(
