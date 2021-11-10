@@ -122,76 +122,8 @@ execute <- function(connectionDetails,
     databaseId = databaseId,
     databaseName = databaseName,
     databaseDescription = databaseDescription,
-    runInclusionStatistics = TRUE,
-    runConceptSetDiagnostics = TRUE,
-    indexDateDiagnosticsRelativeDays = c(-30:30),  #part of index event breakdown
-    runIncludedSourceConcepts = FALSE, #deprecated
-    runOrphanConcepts = FALSE, #deprecated
-    runVisitContext = TRUE,
-    runBreakdownIndexEvents = FALSE, #deprecated
-    runIncidenceRate = TRUE,
-    runCohortTimeSeries = TRUE,
-    runDataSourceTimeSeries = TRUE,
-    runCohortRelationship = TRUE,
-    runTemporalCohortCharacterization = TRUE,
-    temporalCovariateSettings = FeatureExtraction::createTemporalCovariateSettings(
-      useDemographicsGender = TRUE,
-      useDemographicsAge = TRUE,
-      useDemographicsAgeGroup = TRUE,
-      useDemographicsRace = TRUE,
-      useDemographicsEthnicity = TRUE,
-      useDemographicsIndexYear = TRUE,
-      useDemographicsIndexMonth = TRUE,
-      useDemographicsIndexYearMonth = TRUE,
-      useDemographicsPriorObservationTime = TRUE,
-      useDemographicsPostObservationTime = TRUE,
-      useDemographicsTimeInCohort = TRUE,
-      useConditionOccurrence = TRUE,
-      useProcedureOccurrence = TRUE,
-      useDrugEraStart = TRUE,
-      useMeasurement = TRUE,
-      useConditionEraStart = TRUE,
-      useConditionEraOverlap = TRUE,
-      useConditionEraGroupStart = TRUE,
-      useConditionEraGroupOverlap = TRUE,
-      useDrugExposure = FALSE, #leads to too many concept id
-      useDrugEraOverlap = TRUE,
-      useDrugEraGroupStart = TRUE,
-      useDrugEraGroupOverlap = TRUE,
-      useObservation = TRUE,
-      useDeviceExposure = TRUE,
-      useCharlsonIndex = TRUE,
-      useDcsi = TRUE,
-      useChads2 = TRUE,
-      useChads2Vasc = TRUE,
-      useHfrs = FALSE,
-      temporalStartDays = c(
-        -365,-30,
-        0,
-        1,
-        31,
-        -9999,
-        -365,
-        -180,
-        -30,
-        seq(from = -421, to = -31, by = 30),
-        seq(from = 0, to = 390, by = 30)
-      ),
-      temporalEndDays = c(
-        -31,-1,
-        0,
-        30,
-        365,
-        0,
-        0,
-        0,
-        0,
-        seq(from = -391, to = -1, by = 30),
-        seq(from = 30, to = 420, by = 30)
-      )
-    ),
-    minCellCount = 5,
     incremental = incremental,
-    incrementalFolder = incrementalFolder
+    incrementalFolder = incrementalFolder,
+    runCohortCharacterization = FALSE
   )
 }
