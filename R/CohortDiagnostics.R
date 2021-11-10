@@ -123,7 +123,6 @@ execute <- function(connectionDetails,
     databaseName = databaseName,
     databaseDescription = databaseDescription,
     incremental = incremental,
-    incrementalFolder = incrementalFolder,
-    runCohortCharacterization = FALSE
+    incrementalFolder = incrementalFolder
   )
 }
