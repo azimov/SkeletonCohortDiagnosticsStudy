@@ -61,7 +61,7 @@ for (i in (1:length(databaseIds))) {
     generateCohortTableName = TRUE,
     verifyDependencies = FALSE,
     databaseId = databaseIds[[i]],
-    outputFolder = file.path(outputFolder, databaseIds[[i]]),
+    outputFolder = outputFolderLong,
     userService = keyringUserService,
     passwordService = keyringPasswordService,
     preMergeDiagnosticsFiles = TRUE
@@ -84,7 +84,7 @@ loggerName <-
     )
   )
 loggerTrace <-
-  ParallelLogger::addDefaultFileLogger(fileName = file.path(outputFolder, paste0(loggerName, ".txt")))
+  ParallelLogger::addDefaultFileLogger(fileName = file.path(outputFolderLong, paste0(loggerName, ".txt")))
 
 
 ParallelLogger::clusterApply(cluster = cluster,
