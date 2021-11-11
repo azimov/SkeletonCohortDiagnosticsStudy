@@ -28,10 +28,17 @@ rm("cdmSources2")
 ############## databaseIds to run cohort diagnostics on that source  #################
 databaseIds <-
   c(
+    'ims_australia_lpd',
+    'ims_france',
+    'jmdc',
+    'cprd',
+    'iqvia_pharmetrics_plus',
+    'truven_ccae',
     'truven_mdcd',
+    'truven_mdcr',
     'optum_extended_dod',
     'optum_ehr',
-    'truven_ccae')
+    'premier')
 
 ## service name for keyring for db with cdm
 keyringUserService <- 'OHDSI_USER'
@@ -46,6 +53,8 @@ for (i in (1:length(databaseIds))) {
   cdmSource <- cdmSources %>%
     dplyr::filter(.data$sequence == 1) %>%
     dplyr::filter(database == databaseIds[[i]])
+  
+  outputFolderLong <- file.path(outputFolder, paste0(databaseIds[[i]], "_v", as.character(cdmSource$version)))
   
   x[[i]] <- list(
     cdmSource = cdmSource,
