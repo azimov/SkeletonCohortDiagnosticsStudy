@@ -83,13 +83,12 @@ loggerName <-
       replacement = ''
     )
   )
-loggerTrace <-
-  ParallelLogger::addDefaultFileLogger(fileName = file.path(outputFolderLong, paste0(loggerName, ".txt")))
+#ParallelLogger::addDefaultFileLogger(fileName = file.path(outputFolder, paste0(loggerName, ".txt")))
 
 
 ParallelLogger::clusterApply(cluster = cluster,
                              x = x,
                              fun = executeOnMultipleDataSources)
 
-writeLines(readChar(paste0(loggerName, ".txt"), file.info(paste0(loggerName, ".txt"))$size))
+#writeLines(readChar(paste0(loggerName, ".txt"), file.info(paste0(loggerName, ".txt"))$size))
 ParallelLogger::stopCluster(cluster = cluster)
