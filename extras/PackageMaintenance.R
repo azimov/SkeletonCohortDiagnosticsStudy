@@ -28,8 +28,8 @@ OhdsiRTools::createRenvLockFile(rootPackage = "SkeletonCohortDiagnosticsStudy",
                                 additionalRequiredPackages = c("keyring", "checkmate","DatabaseConnector","clock","dplyr","DT",
                                                                "ggplot2","ggiraph","gtable","htmltools","lubridate",
                                                                "pool","purrr","scales","shiny","shinydashboard","shinyWidgets",
-                                                               "tsibble", "feasts", "fable",
-                                                               "stringr","SqlRender","tidyr", "plyr", "CirceR", "aws.s3"),
+                                                               "tsibble", "feasts", "fable","reactable",
+                                                               "stringr","SqlRender","tidyr", "plyr", "CirceR", "aws.s3") %>% sort(),
                                 includeRootPackage = FALSE)
 
 

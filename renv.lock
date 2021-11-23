@@ -789,23 +789,23 @@
 		},
 		"ROhdsiWebApi" : {
 			"Package" : "ROhdsiWebApi",
-			"Version" : "1.2.1",
+			"Version" : "1.2.2",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "ROhdsiWebApi",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v1.2.1"
+			"RemoteRef" : "v1.2.2"
 		},
 		"CohortDiagnostics" : {
 			"Package" : "CohortDiagnostics",
-			"Version" : "2.2.0",
+			"Version" : "3.0.0",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "CohortDiagnostics",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "diagnosticsExplorer"
+			"RemoteRef" : "version3"
 		},
 		"OhdsiSharing" : {
 			"Package" : "OhdsiSharing",
