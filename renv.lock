@@ -761,7 +761,7 @@
 		},
 		"reactable" : {
 			"Package" : "reactable",
-			"Version" : "0.2.3.9000",
+			"Version" : "0.2.3",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -801,13 +801,13 @@
 		},
 		"ROhdsiWebApi" : {
 			"Package" : "ROhdsiWebApi",
-			"Version" : "1.2.2",
+			"Version" : "1.2.1",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "ROhdsiWebApi",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v1.2.2"
+			"RemoteRef" : "v1.2.1"
 		},
 		"CohortDiagnostics" : {
 			"Package" : "CohortDiagnostics",
