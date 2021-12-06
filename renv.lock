@@ -761,7 +761,7 @@
 		},
 		"reactable" : {
 			"Package" : "reactable",
-			"Version" : "0.2.3.9000",
+			"Version" : "0.2.3",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -817,7 +817,7 @@
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "CohortDiagnostics",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v3.0.0"
+			"RemoteRef" : "version3"
 		},
 		"OhdsiSharing" : {
 			"Package" : "OhdsiSharing",
