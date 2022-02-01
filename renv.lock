@@ -143,9 +143,9 @@
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
-			"RemoteRepo" : "OhdsiSharing",
-			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "2.0.0",
+			"RemoteRepo" : "OhdsiRTools",
+			"RemoteUsername" : "OHDSI",
+			"RemoteRef" : "v2.0.0",
 			"Requirements" : [
 				"RJSONIO",
 				"codetools",
