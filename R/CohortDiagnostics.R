@@ -114,14 +114,16 @@ execute <- function(connectionDetails,
   )
   
   # export stats table to local
-  CohortGenerator::exportCohortStatsTables(
-    connectionDetails = connectionDetails,
-    connection = NULL,
-    cohortDatabaseSchema = cohortDatabaseSchema,
-    cohortTableNames = cohortTableNames,
-    cohortStatisticsFolder = outputFolder,
-    incremental = TRUE
-  )
+  # CohortGenerator::exportCohortStatsTables(
+  #   connectionDetails = connectionDetails,
+  #   connection = NULL,
+  #   cohortDatabaseSchema = cohortDatabaseSchema,
+  #   cohortTableNames = cohortTableNames,
+  #   cohortStatisticsFolder = outputFolder,
+  #   incremental = TRUE
+  # )
+  
+  
 
   # run cohort diagnostics
   CohortDiagnostics::executeDiagnostics(
@@ -167,10 +169,10 @@ execute <- function(connectionDetails,
   )
   
   # drop cohort stats table
-  CohortGenerator::dropCohortStatsTables(
-    connectionDetails = connectionDetails,
-    cohortDatabaseSchema = cohortDatabaseSchema,
-    cohortTableNames = cohortTableNames,
-    connection = NULL
-  )
+  # CohortGenerator::dropCohortStatsTables(
+  #   connectionDetails = connectionDetails,
+  #   cohortDatabaseSchema = cohortDatabaseSchema,
+  #   cohortTableNames = cohortTableNames,
+  #   connection = NULL
+  # )
 }
