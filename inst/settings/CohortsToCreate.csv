@@ -1,4 +1,4 @@
-﻿atlasId,cohortId,cohortName,logicDescription,
+﻿atlasId,cohortId,cohortName,logicDescription
 17493,17493,[PL 192671001] Gastrointestinal hemorrhage referent concept incident cohort: First occurrence of referent concept + descendants with >=365d prior observation,Gastrointestinal hemorrhage
 17692,17692,[PL 201254002] Type 1 diabetes mellitus referent concept prevalent cohort: First occurrence of referent concept + descendants,Type 1 diabetes mellitus
 17693,17693,[PL 201254001] Type 1 diabetes mellitus referent concept incident cohort: First occurrence of referent concept + descendants with >=365d prior observation,Type 1 diabetes mellitus
